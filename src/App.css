@@ -1,0 +1,102 @@
+/* === Global & Body Styles === */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f2f5; /* Light grey background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* === Main Form Container === */
+.container {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* === Form Title === */
+.Form {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1c1e21;
+}
+
+/* === Input Fields === */
+input[type="text"],
+input[type="Password"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Style for when an input is focused */
+input[type="text"]:focus,
+input[type="Password"]:focus {
+  outline: none;
+  border-color: #1877f2; /* A nice blue highlight */
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+/* === Submit Button === */
+input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect for the button */
+input[type="submit"]:hover {
+  background-color: #166fe5;
+}
+
+/* Disabled state for the button (while submitting) */
+input[type="submit"]:disabled {
+  background-color: #a0c3e6;
+  cursor: not-allowed;
+}
+
+/* === Error Message Style === */
+.red {
+  color: #fa383e; /* Bright red for errors */
+  font-size: 0.875rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* === Loading Overlay === */
+.loading {
+  position: fixed; /* Cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(4px); /* Modern blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1c1e21;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 9999; /* Ensure it's on top of everything */
+}
